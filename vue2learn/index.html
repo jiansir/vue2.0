@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue2learn</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="static/css/reset.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+
+      // 计算html的font-size
+      (function(){
+        function resizeBaseFontSize(){
+          var rootHtml = document.documentElement,
+            deviceWidth = rootHtml.clientWidth;
+
+          if(deviceWidth > 640){
+            deviceWidth = 640;
+          }
+
+          rootHtml.style.fontSize = deviceWidth / 10 + "px";
+        }
+
+        resizeBaseFontSize();
+
+        window.addEventListener("resize", resizeBaseFontSize, false);
+        window.addEventListener("orientationchange", resizeBaseFontSize, false);
+      })();
+    </script>
+  </body>
+</html>
